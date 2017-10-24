@@ -35,6 +35,12 @@ gem 'jbuilder', '~> 2.5'
 
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
 gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'font-awesome-sass', '~> 4.7.0'
+gem 'rails-gallery'
+gem 'nokogiri'
+gem 'rack', '~> 2.0.1'
+gem 'rspec'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -42,6 +48,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
+  gem 'railroady'
 end
 
 group :development do
