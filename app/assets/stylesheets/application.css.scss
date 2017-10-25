@@ -10,17 +10,24 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require_tree .
+ *= require_self
  *= require gallery/responsive/elastislide
  *= require gallery/responsive
  *= require gallery/slideshow
  *= require gallery/galleria/classic
  *= require gallery/touch_touch
- 
- *= require_tree .
- *= require_self
- */
+*/
 
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ @import 'gallery/responsive/elastislide';
+ @import 'gallery/responsive';
+ @import 'gallery/slideshow';
+ @import 'gallery/galleria/classic';
+ @import 'gallery/touch_touch';
 
