@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :prefereces
   get 'welcome/homepage'
 
   devise_for :users, controllers: {

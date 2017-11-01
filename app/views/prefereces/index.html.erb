@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Prefereces</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Zone</th>
+      <th>Imgurl</th>
+      <th>Search</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prefereces.each do |preferece| %>
+      <tr>
+        <td><%= preferece.type %></td>
+        <td><%= preferece.name %></td>
+        <td><%= preferece.description %></td>
+        <td><%= preferece.Latitude %></td>
+        <td><%= preferece.Longitude %></td>
+        <td><%= preferece.zone %></td>
+        <td><%= preferece.imgurl %></td>
+        <td><%= preferece.search %></td>
+        <td><%= link_to 'Show', preferece %></td>
+        <td><%= link_to 'Edit', edit_preferece_path(preferece) %></td>
+        <td><%= link_to 'Destroy', preferece, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Preferece', new_preferece_path %>

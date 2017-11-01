@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171023204057) do
+ActiveRecord::Schema.define(version: 20171101220557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,27 @@ ActiveRecord::Schema.define(version: 20171023204057) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "prefereces", force: :cascade do |t|
+    t.string "type"
+    t.string "name"
+    t.string "description"
+    t.float "Latitude"
+    t.float "Longitude"
+    t.string "zone"
+    t.string "imgurl"
+    t.bigint "search_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["search_id"], name: "index_prefereces_on_search_id"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "type"
+    t.string "zone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,4 +62,5 @@ ActiveRecord::Schema.define(version: 20171023204057) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "prefereces", "searches"
 end

@@ -1,0 +1,57 @@
+<%= form_with(model: preferece, local: true) do |form| %>
+  <% if preferece.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(preferece.errors.count, "error") %> prohibited this preferece from being saved:</h2>
+
+      <ul>
+      <% preferece.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type, id: :preferece_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :preferece_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :preferece_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Latitude %>
+    <%= form.text_field :Latitude, id: :preferece_Latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Longitude %>
+    <%= form.text_field :Longitude, id: :preferece_Longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zone %>
+    <%= form.text_field :zone, id: :preferece_zone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :imgurl %>
+    <%= form.text_field :imgurl, id: :preferece_imgurl %>
+  </div>
+
+  <div class="field">
+    <%= form.label :search_id %>
+    <%= form.text_field :search_id, id: :preferece_search_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
