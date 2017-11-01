@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @preferece.type %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @preferece.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @preferece.description %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @preferece.Latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @preferece.Longitude %>
+</p>
+
+<p>
+  <strong>Zone:</strong>
+  <%= @preferece.zone %>
+</p>
+
+<p>
+  <strong>Imgurl:</strong>
+  <%= @preferece.imgurl %>
+</p>
+
+<p>
+  <strong>Search:</strong>
+  <%= @preferece.search %>
+</p>
+
+<%= link_to 'Edit', edit_preferece_path(@preferece) %> |
+<%= link_to 'Back', prefereces_path %>
