@@ -6,7 +6,8 @@
         <div class="intro-text">
           <div class="intro-lead-in">Welcome To Guided You!</div>
           <div class="col-lg-12 text-center">
-            <select name="select_1" id="select_1">
+
+            <select name="select_1" id="select_1" class="search_index">
   <option value="Places">Places</option>
   <option value="Food">Foods</option>
   <option value="Party">Partys</option>
@@ -18,13 +19,13 @@
 </select>
 
 <script>
-  $("#select_1 > option").on('click', (function() {
+  $("#select_1 > option").on('click', function() {
     select_1 = $("select_1").val();
     $("#select_2").empty();
     if (select_1 == "Places"){
       valor = "<option value ='Moneda'>La Moneda</option>";
       valor+= "<option value ='Catedral'>Catedral</option>";
-      valor+= "<option value ='Cajon del maipo'>Cajon del Maipo</option>";
+      valor+= "<option value ='Cajon'>Cajon del Maipo</option>";
 
       $("#select_2").prepend(valor);  
     }else if (select_1 == "Food"){
@@ -39,15 +40,16 @@
       valor = "<option value='Bellavista'>Bellavista</option>";
       valor+= "<option value='Providencia'>Providencia</option>";
       valor+= "<option value='Ñuñoa'>Ñuñoa</option>";
-      $("#select_2").prepend(valor);}
-
+      $("#select_2").prepend(valor);
     }
+
+    
     /* Act on the event */ 
   });
 
 </script></div>
          
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Search</a>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio">Search</a>
         </div>
       </div>
     </header>
@@ -324,7 +326,7 @@
     </section>
 
     <!-- Clients -->
-    <section class="py-5">
+    <!-- <section class="py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-3 col-sm-6">
@@ -349,7 +351,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact -->
     <section id="contact">
@@ -357,7 +359,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class="section-subheading text-muted">If you need more information about trip or other places.</h3>
           </div>
         </div>
         <div class="row">
@@ -413,10 +415,10 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="assets/portfolio/01-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <h2 class="text-uppercase">Mercado</h2>
+                  <p class="item-intro text-muted">Seafood in Santiago.</p>
+                  <img class="img-fluid d-block mx-auto" src="https://goo.gl/yrq3Z7" alt="">
+                  <p>Enjoy the best seafood an typical Chilean foods!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Threads</li>
@@ -424,7 +426,14 @@
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Close View</button>
+
+                  <div>
+                    
+
+                    
+                  </div>
+
                 </div>
               </div>
             </div>

@@ -69,6 +69,8 @@ class PreferecesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def preferece_params
-      params.require(:preferece).permit(:type, :name, :description, :Latitude, :Longitude, :zone, :imgurl, :search_id)
+      params.require(:preferece).permit(:type, :name, :description, :Latitude, :Longitude, :zone, :imgurl, :search_id, :address)
     end
+
+
 end
