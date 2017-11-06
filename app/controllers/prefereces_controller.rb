@@ -1,5 +1,6 @@
 class PreferecesController < ApplicationController
   before_action :set_preferece, only: [:show, :edit, :update, :destroy]
+  attr_accessor :only
 
   # GET /prefereces
   # GET /prefereces.json
