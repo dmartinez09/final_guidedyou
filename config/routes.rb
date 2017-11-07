@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :prefereces
   get 'welcome/homepage'
-
+  post 'welcome/places'
   devise_for :users, controllers: {
   	registrations: 'users/registrations'
 

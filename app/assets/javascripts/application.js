@@ -16,6 +16,7 @@
 //= require bootstrap.bundle
 //= require turbolinks
 //= require underscore
+//= require jquery.nice-select.min
 //= require jquery.easing
 //= require agency
 //= require gmaps/google
