@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-before_action :filter_admin!, except: [:index]
+  load_and_authorize_resource
 
   # GET /posts
   # GET /posts.json
@@ -26,7 +26,7 @@ before_action :filter_admin!, except: [:index]
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
+    @post.user = current_user
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }

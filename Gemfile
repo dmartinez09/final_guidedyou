@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'jquery-rails'
 #gem 'bootstrap-sass', '~> 3.3.6'
 #gem 'font-awesome-sass', '~> 4.7.0'
@@ -41,6 +43,7 @@ gem 'rails-gallery'
 gem 'nokogiri'
 gem 'rack', '~> 2.0.1'
 gem 'rspec'
+gem 'cancancan'
 
 # geolocalizacion 
 gem 'geocoder'
