@@ -6,11 +6,12 @@
         <div class="intro-text">
           <div class="intro-lead-in">Welcome To Guided You!</div>
             <div class="row">
-              <div class="input-group col-md-offset-2 col-md-6"></div>
-                <select name="select_1" id="select_1" class="search_index">
+              
+              <div class="col-md-12 text-center">
+                <select name="select_1" id="select_1" class="col-md-1">
                   <option value="Places">Places</option>
                   <option value="Foods">Foods</option>
-                  <option value="Party">Party</option>
+                  <option value="Party">Partys</option>
 
                 </select><br>
                 <script>
@@ -26,7 +27,7 @@
 
                 </script>
             </div>
-         
+            </div>
          
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio">Search</a>
         </div>
@@ -38,7 +39,7 @@
     <section class="bg-light" id="portfolio">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 text-center">
+          <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Recomendations</h2>
             <h3 class="section-subheading text-muted">We can offers some places to visit only for you.</h3>
           </div>
@@ -46,7 +47,76 @@
         <div class="row" id="preferences_list">
           <%= render 'places_list', places: @places %>
 
-         
+          <!-- <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="https://goo.gl/SgSfWZ" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Moneda</h4>
+              <p class="text-muted">Graphic Design</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="https://goo.gl/R7R1n3" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Valle Nevado</h4>
+              <p class="text-muted">Identity</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="https://goo.gl/g7Ebfr" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Cajon del Maipo</h4>
+              <p class="text-muted">Branding</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="https://goo.gl/tRRGjT" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Bellavista</h4>
+              <p class="text-muted">Website Design</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="https://goo.gl/HRC4X5" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Costanera</h4>
+              <p class="text-muted">Photography</p>
+            </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -256,33 +326,6 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-          <div class="containde">
-            <div style='width: 800px;'>
-              <div id="map" style='width: 800px; height: 400px;'></div>
-            </div>
-          <script>
-          function initMap(){
-          handler = Gmaps.build('Google');
-          handler.buildMap(
-          { provider: {
-          center:{ 
-          lat: -33.4429091,
-          lng: -70.6560586,
-          },
-          zoom: 16
-          }, 
-  internal: 
-  {id: 'map'}
-  } 
-  );
-};
-</script>
-<script src="//maps.google.com/maps/api/js?key=AIzaSyAXOmHI2fEhkqEz-uAGl5gFgwPAdI1iumA&callback=initMap" async defer></script>
-<script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
-<%= javascript_include_tag "application", 'data-turbolinks-track' => 'reload' %>
-
-
-
           </div>
             <h2 class="section-heading text-uppercase">Contact Us</h2>
             <h3 class="section-subheading text-muted">If you need more information about trip or other places.</h3>
