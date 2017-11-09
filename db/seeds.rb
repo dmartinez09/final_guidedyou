@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
+Preferece.destroy_all
+Search.destroy_all
+
 Search.create(tipe:"1", zone:"Arica y Parinacota")
 Search.create(tipe:"2", zone:"Tarapacá")
 Search.create(tipe:"3", zone:"Antofagasta")
