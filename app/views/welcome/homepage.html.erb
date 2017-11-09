@@ -4,16 +4,19 @@
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">Welcome To Guided You!</div>
+          <div class="intro-lead-in">Discover Chile!</div>
             <div class="row">
               
               <div class="col-md-12 text-center">
-                <select name="select_1" id="select_1" class="col-md-1">
-                  <option value="Places">Places</option>
-                  <option value="Foods">Foods</option>
-                  <option value="Party">Partys</option>
-
+                <select name="select_1" id="select_1" class="search_index wide" tabindex="0">
+                  <span class="current"> Select Option  </span>
+                  <ul class="list">
+                  <option data-display="Places">Places</option>
+                  <option data-display="Foods">Foods</option>
+                  <option data-display="Party">Partys</option>
+                  
                 </select><br>
+                </ul>
                 <script>
                   $("#select_1").on('change', function() {
                     var select_1 = $("#select_1").val();   
@@ -28,7 +31,7 @@
                 </script>
             </div>
             </div>
-         
+         <br>
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio">Search</a>
         </div>
       </div>
@@ -40,8 +43,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Recomendations</h2>
-            <h3 class="section-subheading text-muted">We can offers some places to visit only for you.</h3>
+            <h2 class="section-heading text-uppercase">Discover</h2>
+            <h3 class="section-subheading text-muted">Travel Destinations</h3>
           </div>
         </div>
         <div class="row" id="preferences_list">
@@ -127,7 +130,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">How to operate Guided You!!</h2>
-            <h3 class="section-subheading text-muted">It`s easy.</h3>
+            <h3 class="section-subheading text-muted">Tips and Tricks for Guided You</h3>
           </div>
         </div>
         <div class="row">
@@ -236,7 +239,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-sm-4">
+          <!-- <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="assets/team/2.jpg" alt="">
               <h4>Diego Martinez</h4>
@@ -259,12 +262,12 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <!-- <div class="col-sm-4">
+          </div> -->
+          <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="assets/team/3.jpg" alt="">
-              <h4>Diana Pertersen</h4>
-              <p class="text-muted">Lead Developer</p>
+              <img class="mx-auto rounded-circle" src="assets/team/2.jpg" alt="">
+              <h4>Diego Martinez</h4>
+              <p class="text-muted">Desafio Latam</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -283,7 +286,7 @@
                 </li>
               </ul>
             </div>
-          </div> -->
+          </div> 
         </div>
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
