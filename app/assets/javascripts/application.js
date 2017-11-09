@@ -14,6 +14,7 @@
 //= require rails-ujs
 //= require bootstrap
 //= require bootstrap.bundle
+//= require popper
 //= require turbolinks
 //= require underscore
 //= require jquery.nice-select.min

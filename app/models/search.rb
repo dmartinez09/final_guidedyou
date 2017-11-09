@@ -1,3 +1,3 @@
 class Search < ApplicationRecord
-	has_many :Prefereces
+	has_many :prefereces
 end

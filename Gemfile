@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'devise-bootstrap-views'
 gem 'jquery-rails'
 #gem 'bootstrap-sass', '~> 3.3.6'
 #gem 'font-awesome-sass', '~> 4.7.0'
@@ -49,6 +50,10 @@ gem 'cancancan'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem 'carrierwave'
+gem 'mini_magick'
+
+gem 'popper_js'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -69,6 +74,7 @@ group :development do
   gem "better_errors"
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem "binding_of_caller"
+  gem 'bullet'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

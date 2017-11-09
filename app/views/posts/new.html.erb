@@ -1,46 +1,7 @@
 <h1>New Post</h1>
 
+<%= render 'index', index_path  %>
 <%= render 'form', post: @post %>
 
 <%= link_to 'Back', posts_path %>
 
-<select name="select_1" id="select_1">
-	<option value="Places">Places</option>
-	<option value="Food">Foods</option>
-	<option value="Party">Partys</option>
-
-</select>
-
-<select name="select_2" id="select_2">
-	
-</select>
-
-<script>
-	$("#select_1 > option").on('click', (function() {
-		select_1 = $("select_1").val();
-		$("#select_2").empty();
-		if (select_1 == "Places"){
-			valor = "<option value ='Moneda'>La Moneda</option>";
-			valor+= "<option value ='Catedral'>Catedral</option>";
-			valor+= "<option value ='Cajon del maipo'>Cajon del Maipo</option>";
-
-			$("#select_2").prepend(valor);	
-		}else if (select_1 == "Food"){
-
-			valor = "<option value='Mercado'>Mercado</option>";
-			valor+= "<option value='Giratorio'>Giratorio</option>";
-			valor+= "<option value='Carnes'>Carnes</option>";
-
-			$("#select_2").prepend(valor);	
-		}else if (select_1 == "Party"){
-
-			valor = "<option value='Bellavista'>Bellavista</option>";
-			valor+= "<option value='Providencia'>Providencia</option>";
-			valor+= "<option value='Ñuñoa'>Ñuñoa</option>";
-			$("#select_2").prepend(valor);}
-
-		}
-		/* Act on the event */ 
-	});
-
-</script>

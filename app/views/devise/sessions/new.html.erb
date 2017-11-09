@@ -1,38 +1,57 @@
-<h2>Log in</h2>
+<br>
+<br>
+<br>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+<div class="vertical-center"">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3"> 
+        <div class="panel panel-default devise-bs">
+          <div class="panel-heading text-center">
+            <h4><strong>Log In</strong></h4>
+          </div>
+          <div class="panel-body">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
+            </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+            <div class="form-group">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+
+            <% if devise_mapping.rememberable? -%>
+            <div class="checkbox">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+            <% end -%>
+
+            <div class="actions">
+              <%= f.submit "Log in" %>
+            </div>
+            <% end %>
+            <script>
+              FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+              });
+
+            </script>
+
+            <fb:login-button
+            scope="public_profile,email"
+            onlogin="checkLoginState();"> 
+          </fb:login-button>
+
+
+          <%= render "devise/shared/links" %>
+
+        </div>
+      </div>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-<script>
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-});
-  
-</script>
-
-<fb:login-button
-scope="public_profile,email"
-onlogin="checkLoginState();"> 
-</fb:login-button>
-
-
-<%= render "devise/shared/links" %>
+</div>
+</div>
